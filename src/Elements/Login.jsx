@@ -16,8 +16,8 @@ const Login = () => {
                 name : e.target.name.value,
                 password: e.target.password.value
             });
-            console.log(res)
             window.location.href = "/";
+            console.log(res)
         } catch (error) {
             if (error.response) {
                 setErrorLogin(error.response.data.msg);
