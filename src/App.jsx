@@ -17,8 +17,8 @@ import ArtikelSlide from "./Elements/ArtikelSlide";
 const App = () => {
     return (
         <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
+            <Route path="/" element={<Home />} ></Route>
+            <Route path="/login" element={<Login />} ></Route>
             <Route path="/upload" element={<Upload/>}></Route>
             <Route path="/upload/fotografi" element={<UploadFotografi/>}></Route>
             <Route path="/upload/pojok-karya" element={<UploadPojokKarya/>}></Route>
