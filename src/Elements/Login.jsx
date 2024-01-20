@@ -12,12 +12,11 @@ const Login = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post("https://sman-61-server.vercel.app/login", {
+            await axios.post("https://sman-61-server.vercel.app/login", {
                 name : e.target.name.value,
                 password: e.target.password.value
             });
-            // window.location.href = "/";
-            console.log(res)
+            window.location.href = "/";
         } catch (error) {
             if (error.response) {
                 setErrorLogin(error.response.data.msg);
