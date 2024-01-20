@@ -26,6 +26,7 @@ const Humberger = () => {
             const response = await axios.get("https://sman-61-server.vercel.app/token");
             setIsLoggedIn(true);
             jwtDecode(response.data.accessToken);
+            console.log(response.data)
         } catch (error) {
             console.log(error);
         }
