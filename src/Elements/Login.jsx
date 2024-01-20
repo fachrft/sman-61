@@ -16,6 +16,7 @@ const Login = () => {
                 name : e.target.name.value,
                 password: e.target.password.value
             });
+            alert('login berhasil')
             window.location.href = "/";
         } catch (error) {
             if (error.response) {
