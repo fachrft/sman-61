@@ -9,15 +9,6 @@ const Humberger = () => {
     const hamburger = useRef(null);
     const header = useRef(null);
     const navMenu = useRef(null);
-    window.onscroll = () => {
-        const fixedNav = header.current.offsetTop;
-        if (window.pageYOffset > fixedNav) {
-            header.current.classList.add("navbar-fixed");
-            navMenu.current.classList.add("text-black");
-        } else {
-            header.current.classList.remove("navbar-fixed");
-        }
-    };
 
     const clickHamburger = () => {
         hamburger.current.classList.toggle("hamburger-active");
