@@ -28,13 +28,16 @@ const Footer = () => {
                     <h1 className="font-semibold text-sm">Made With Love by co-Pilot</h1>
                 </div>
                 <div className="flex gap-5">
-                    <Link to='https://www.instagram.com/nasa.pers/'>
+                    <Link to="https://www.instagram.com/nasa.pers/">
                         <img src={instagram} alt="" />
                     </Link>
-                    <Link to='mailto:persanmasatu@gmail.com'>
+                    <Link
+                        to="mailto:persenamsatu@gmail.com
+"
+                    >
                         <img className="translate-y-1" src={emailPutih} alt="" />
                     </Link>
-                    <Link to='https://twitter.com/nasapers'>
+                    <Link to="https://twitter.com/nasapers">
                         <img src={twitter} alt="" />
                     </Link>
                 </div>

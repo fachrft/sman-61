@@ -23,7 +23,7 @@ const Humberger = () => {
 
     const refreshToken = async () => {
         try {
-            const response = await axios.get("https://sman-61-server.vercel.app/:token");
+            const response = await axios.get("https://sman-61-server.vercel.app/token");
             setIsLoggedIn(true);
             jwtDecode(response.data.accessToken);
         } catch (error) {
@@ -34,7 +34,7 @@ const Humberger = () => {
     const logout = async () => {
         try {
             await axios.delete("https://sman-61-server.vercel.app/logout");
-            alert('Berhasil Logout')
+            alert("Berhasil Logout");
             window.location.href = "/login";
         } catch (error) {
             console.log(error);
@@ -73,12 +73,12 @@ const Humberger = () => {
                                 </li>
                                 <li className="group">
                                     <a href="https://spotify.link/VB5xVIQeMDb" className="text-base py-2 mx-8 flex lg:text-white font-semibold group-hover:text-sky-500">
-                                        Audio NASATALKS
+                                        NASATALKS
                                     </a>
                                 </li>
                                 <li className="group">
                                     <a href="/all-majalah" className="text-base py-2 mx-8 flex lg:text-white font-semibold group-hover:text-sky-500">
-                                        NasaMagz 
+                                        NASAMAGZ
                                     </a>
                                 </li>
                                 <li className="group">
