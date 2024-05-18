@@ -1,9 +1,4 @@
 import { useRef } from "react";
-import Button from "./Button";
-import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
-import axios from "axios";
-import { jwtDecode } from "jwt-decode";
 
 const Humberger = () => {
     const hamburger = useRef(null);
@@ -15,44 +10,10 @@ const Humberger = () => {
         navMenu.current.classList.toggle("hidden");
     };
 
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-    useEffect(() => {
-        refreshToken();
-    }, []);
-
-    const refreshToken = async () => {
-        try {
-            const response = await axios.get("https://sman-61-server.vercel.app/token");
-            setIsLoggedIn(true);
-            jwtDecode(response.data.accessToken);
-        } catch (error) {
-            console.log(error);
-        }
-    };
-
-    const logout = async () => {
-        try {
-            await axios.delete("https://sman-61-server.vercel.app/logout");
-            alert("Berhasil Logout");
-            window.location.href = "/login";
-        } catch (error) {
-            console.log(error);
-        }
-        setIsLoggedIn(false);
-    };
-
     return (
         <header ref={header} className="bg-transparent absolute top-0 left-0 w-full flex items-center z-10 h-20">
             <div className="container">
                 <div className="flex px-1 font-sans justify-between items-center lg:px-10">
-                    <div>
-                        {isLoggedIn && (
-                            <Link to="/upload">
-                                <Button isi="Upload" backgroundColor="#D64D69" />
-                            </Link>
-                        )}
-                    </div>
                     <div className="flex items-center">
                         <button ref={hamburger} onClick={clickHamburger} className="animasi-x absolute pr-4 right-4 block lg:hidden" type="Button">
                             <span className="hamburger border-2 transition duration-200 ease-in-out origin-top-left"></span>
@@ -91,9 +52,6 @@ const Humberger = () => {
                                         Sosial media NASAPERS
                                     </a>
                                 </li>
-                                <Link to={isLoggedIn ? "/" : "/login"}>
-                                    <Button isi={isLoggedIn ? "Logout" : "Login"} backgroundColor="#805A8A" onClick={isLoggedIn ? logout : null} />
-                                </Link>
                             </ul>
                         </nav>
                     </div>

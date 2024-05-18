@@ -1,8 +1,7 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useState, useEffect } from "react";
+import { DataFotografi } from "../data/Fotografi.js";
 import CardSwiperCard from "../Fragments/CardSwiperCard";
-import axios from "axios";
 
 // Import Swiper styles
 import "swiper/css";
@@ -15,20 +14,7 @@ import "../css/style.css";
 import { EffectCards } from "swiper/modules";
 
 const Fotografi = () => {
-    const [fotografi, setFotografi] = useState([]);
-
-    useEffect(() => {
-        getAllFotografi();
-    }, []);
-
-    const getAllFotografi = async () => {
-        try {
-            const response = await axios.get("https://sman-61-server.vercel.app/gallery");
-            setFotografi(response.data);
-        } catch (error) {
-            console.log(error);
-        }
-    };
+    
     const motongText = (text, maxLength) => {
         if (text.length <= maxLength) {
             return text;
@@ -46,7 +32,7 @@ const Fotografi = () => {
             </div>
             <div>
                 <Swiper effect={"cards"} grabCursor={true} modules={[EffectCards]} className="mySwiper">
-                    {fotografi.map((card) => {
+                    {DataFotografi.map((card) => {
                         return (
                             <SwiperSlide key={card.id}>
                                 <CardSwiperCard image={card.foto} isi={motongText(card.keterangan, 100)} tujuan="/all-fotografi"/>

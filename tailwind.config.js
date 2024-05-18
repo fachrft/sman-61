@@ -5,9 +5,6 @@ export default {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'Background': "url('./src/assets/bg.png')",
-      },
       colors: {
         'bg-color': '#805A8A',
         'button-file': '#D64D69',
