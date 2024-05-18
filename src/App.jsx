@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Home from './Elements/Home'
+import Pengurus from "./Elements/Pengurus";
 import AllFotografi from "./Elements/AllFotografi";
 import AllPojokKarya from "./Elements/AllPojokKarya";
 import AllMajalah from "./Elements/AllMajalah";
