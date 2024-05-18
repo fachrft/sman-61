@@ -21,7 +21,7 @@ const AllMajalah = () => {
     return (
         <div className="bg-pengurus">
             <div className="pt-5 flex">
-                <Link to="/all-artikel">
+                <Link to="/">
                     <Button isi="Kembali" backgroundColor="#D64D69" />
                 </Link>
                 <div></div>
@@ -36,7 +36,7 @@ const AllMajalah = () => {
             </div>
             <div className="flex justify-center items-center mb-8">
                 <div className="bg-bg-color px-2 py-1 rounded-xl">
-                    <h1 className="badan-pengurus text-base text-pengurus">Artikel</h1>
+                    <h1 className="badan-pengurus text-base text-pengurus">Majalah</h1>
                 </div>
             </div>
             <div className="px-5 mb-10">
