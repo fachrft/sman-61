@@ -1,7 +1,7 @@
 import Nasa from "../Fragments/Nasa";
 import nasatalks from "../assets/nasatalks.png";
 import nasatalksText from "../assets/nasatalks_text.png";
-import nasamagz from "../assets/nasamagznew.png";
+import nasamagz from "../assets/nasamagz.png";
 import nasamagzText from "../assets/nasamagz_text.png";
 import { Link } from "react-router-dom";
 
@@ -14,7 +14,7 @@ const NasaPage = () => {
                 </Link>
             </div>
             <div>
-                <Link to="https://nasamagz.carrd.co/">
+                <Link to="./all-majalah">
                     <Nasa image={nasamagz} title={nasamagzText} />
                 </Link>
             </div>
