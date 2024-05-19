@@ -6,7 +6,7 @@ import AllPojokKarya from "./Elements/AllPojokKarya";
 import AllArtikel from "./Elements/AllArtikel";
 import AllMajalah from "./Elements/AllMajalah";
 import ArtikelSlide from "./Elements/ArtikelSlide";
-import AllMajalahVol6 from "./Elements/AllMajalahVol6";
+import AllMajalahVol6 from './Elements/AllMajalahVol6'
 
 
 const App = () => {
@@ -17,8 +17,8 @@ const App = () => {
             <Route path="/all-pojok-karya" element={<AllPojokKarya />}></Route>
             <Route path="/all-artikel" element={<AllArtikel/>}></Route>
             <Route path="/all-majalah" element={<AllMajalah/>}></Route>
+            <Route path="/all-majalah/vol-6" element={<AllMajalahVol6/>}></Route>
             <Route path="/all-artikel/artikel-slide" element={<ArtikelSlide/>}></Route>
-            <Route path="/all-majalah-vol6" element={<AllMajalahVol6/>}></Route>
             <Route path="/pengurus" element={<Pengurus/>}></Route>
         </Routes>
     );
