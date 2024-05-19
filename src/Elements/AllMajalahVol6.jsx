@@ -2,8 +2,9 @@ import Button from "../Fragments/Button";
 import { Link } from "react-router-dom";
 import logoFooter from "../assets/logo-footer.png";
 import nasaPers from "../assets/Nasa-pers.png";
-import { DataMajalah } from "../data/Majalah";
-import Footer from "../Fragments/Footer"; 
+import { DataMajalahV2 } from "../data/Majalahv2";
+import Footer from "../Fragments/Footer";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -16,7 +17,7 @@ import "../css/swiper.css";
 // import required modules
 import { Pagination, Navigation } from "swiper/modules";
 
-const AllMajalah = () => {
+const AllMajalahVol6 = () => {
     return (
         <div className="bg-pengurus">
             <div className="pt-5 flex">
@@ -50,13 +51,12 @@ const AllMajalah = () => {
                     modules={[Pagination, Navigation]}
                     className="cardmajalah-swiper"
                 >
-                    {DataMajalah.map((magz, i) => (
-                        <SwiperSlide key={i} className="relative">
-                            <a href={magz.link}>
+                    {DataMajalahV2
+                        .map((magz, i) => (
+                            <SwiperSlide key={i} className="relative">
                                 <img className="w-[317px] h-[449px]" src={magz.foto} alt="" />
-                            </a>
-                        </SwiperSlide>
-                    ))}
+                            </SwiperSlide>
+                        ))}
                 </Swiper>
             </div>
             <div className="pt-44">
@@ -66,4 +66,4 @@ const AllMajalah = () => {
     );
 };
 
-export default AllMajalah;
+export default AllMajalahVol6;

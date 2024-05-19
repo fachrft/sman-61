@@ -1,0 +1,13 @@
+export const DataMajalahV2 = [
+    {
+        id: 1,
+        foto: "/majalah/nasamagznew.png",
+        link : "https://nasamagz.carrd.co/"
+    },
+    {
+        id: 2,
+        foto: "",
+        keterangan: "",
+        link : ""
+    },
+]

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
     return (
-        <div className="bg-Background h-[140vh]">
+        <div className="bg-Background mb-20">
             <div className="h-20">
                 <Humberger />
             </div>
