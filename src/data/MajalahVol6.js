@@ -157,7 +157,7 @@ export const MajalahVol6 = [
     },
     {
         id: 40,
-        foto: "/nasamek/d (39)).png",
+        foto: "/nasamek/d (39).png",
     },
     {
         id: 41,
