@@ -1,13 +1,13 @@
 import "../css/style.css";
-import { DataFotografi } from "../data/Fotografi";
+import { Fotografi22Ng } from "../data/Fotografi22Ng";
 import Button from "../Fragments/Button";
 import { Link } from "react-router-dom";
 
-const AllFotografi = () => {
+const AllFotografi22Ng = () => {
     return (
-        <div className="bg-pengurus" style={{ height: DataFotografi.length <= 6 ? "100vh" : "auto" }}>
+        <div className="bg-pengurus" style={{ height: Fotografi22Ng.length <= 6 ? "100vh" : "auto" }}>
             <div className="pt-5 flex">
-                <Link to="/">
+                <Link to="/all-fotografi">
                     <Button isi="Kembali" backgroundColor="#D64D69" />
                 </Link>
                 <div></div>
@@ -18,16 +18,14 @@ const AllFotografi = () => {
                 </div>
             </div>
             <div className="flex justify-center items-center gap-3 flex-wrap">
-                {DataFotografi.map((foto) => (
-                    <a href={foto.link} key={foto.id}>
-                        <div className="image-container bg-bg-color flex justify-center items-center w-44 h-44 cursor-pointer relative">
-                            <p className="text-3xl font-semibold text-white">{foto.keterangan}</p>
-                        </div>
-                    </a>
+                {Fotografi22Ng.map((foto) => (
+                    <div key={foto.id} className="image-container cursor-pointer relative">
+                        <img className="w-[173px] h-[165px]" src={foto.foto} alt="" />
+                    </div>
                 ))}
             </div>
         </div>
     );
 };
 
-export default AllFotografi;
+export default AllFotografi22Ng;
