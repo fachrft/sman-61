@@ -2,8 +2,18 @@ import "../css/style.css";
 import { Fotografi19Kom } from "../data/Fotografi19Kom";
 import Button from "../Fragments/Button";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const AllFotografi19Kom = () => {
+    const [selectedImage, setSelectedImage] = useState(null);
+
+    const handleImageClick = (foto) => {
+        setSelectedImage(foto);
+    };
+
+    const handleBackgroundClick = () => {
+        setSelectedImage(null);
+    };
     return (
         <div className="bg-pengurus" style={{ height: Fotografi19Kom.length <= 6 ? "100vh" : "auto" }}>
             <div className="pt-5 flex">
@@ -14,16 +24,33 @@ const AllFotografi19Kom = () => {
             </div>
             <div className="flex justify-center items-center mb-8 pt-10">
                 <div className="bg-bg-color px-4 py-2 rounded-xl mb-8">
-                    <h1 className="badan-pengurus text-3xl text-white">Fotografi</h1>
+                    <h1 className="badan-pengurus text-3xl text-white">19 - KOM</h1>
                 </div>
             </div>
             <div className="flex justify-center items-center gap-3 flex-wrap">
-                {Fotografi19Kom.map((foto) => (
-                    <div key={foto.id} className="image-container cursor-pointer relative">
-                        <img className="w-[173px] h-[165px]" src={foto.foto} alt="" />
-                    </div>
-                ))}
-            </div>
+            {Fotografi19Kom.map((foto) => (
+                <div key={foto.id} className="image-container cursor-pointer relative">
+                    <img 
+                        className="w-[173px] h-[165px]" 
+                        src={foto.foto} 
+                        alt="" 
+                        onClick={() => handleImageClick(foto)}
+                    />
+                </div>
+            ))}
+            {selectedImage && (
+                <div
+                    className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50"
+                    onClick={handleBackgroundClick}
+                >
+                    <img 
+                        className="max-w-full max-h-full px-5"
+                        src={selectedImage.foto} 
+                        alt="" 
+                    />
+                </div>
+            )}
+        </div>
         </div>
     );
 };

@@ -14,7 +14,7 @@ const AllFotografi22Ng = () => {
             </div>
             <div className="flex justify-center items-center mb-8 pt-10">
                 <div className="bg-bg-color px-4 py-2 rounded-xl mb-8">
-                    <h1 className="badan-pengurus text-3xl text-white">Fotografi</h1>
+                    <h1 className="badan-pengurus text-3xl text-white">22 - NG</h1>
                 </div>
             </div>
             <div className="flex justify-center items-center gap-3 flex-wrap">
