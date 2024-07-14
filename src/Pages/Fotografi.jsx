@@ -48,7 +48,7 @@ const Fotografi = () => {
                     <h1 className="badan-pengurus text-3xl text-white">Fotografi</h1>
                 </div>
             </div>
-            <div>
+            <div className="">
                 <Swiper effect={"cards"} grabCursor={true} modules={[EffectCards]} className="mySwiper">
                     {randomPhotos.map((card) => {
                         return (

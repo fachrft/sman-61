@@ -5,7 +5,7 @@ const CardSwiperCard = (props) => {
     const { image, isi, tujuan } = props;
     return (
         <div className="px-14 relative">
-            <div>
+            <div className="w-[288px] h-[418px]">
                 <img className="w-[288px] h-[418px] rounded-3xl bg-cover bg-no-repeat bg-center" src={image} alt="" />
             </div>
             <div className="absolute bottom-10 w-60">
